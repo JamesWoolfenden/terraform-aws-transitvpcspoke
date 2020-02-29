@@ -1,6 +1,9 @@
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-transitvpcspoke [![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-transitvpcspoke.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-transitvpcspoke) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-transitvpcspoke.svg)](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke/releases/latest)
+# terraform-aws-transitvpcspoke
+
+[![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-transitvpcspoke.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-transitvpcspoke)
+[![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-transitvpcspoke.svg)](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke/releases/latest)
 
 ---
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
@@ -16,23 +19,39 @@ module spoke {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| archive | n/a |
+| aws | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| bucket\_name | hashicorp required | string | n/a | yes |
-| bucket\_prefix |  | string | n/a | yes |
-| common\_tags |  | map | n/a | yes |
-| config\_file |  | string | n/a | yes |
-| log\_level |  | string | n/a | yes |
-| poller\_enabled |  | string | `"true"` | no |
+|------|-------------|------|---------|:-----:|
+| bucket\_name | n/a | `string` | n/a | yes |
+| bucket\_prefix | n/a | `string` | n/a | yes |
+| common\_tags | n/a | `map` | n/a | yes |
+| config\_file | n/a | `string` | n/a | yes |
+| event\_rule\_name | n/a | `string` | `"vgw_lambda_poller_event"` | no |
+| function\_name | n/a | `string` | `"vgw_poller"` | no |
+| log\_level | n/a | `string` | n/a | yes |
+| policy\_name | n/a | `string` | `"TransitVpcPollerPolicy"` | no |
+| poller\_enabled | n/a | `string` | `"true"` | no |
+| rolename | n/a | `string` | `"TransitVpcPollerRole"` | no |
+| runtime | n/a | `string` | `"python2.7"` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| lambda | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Information
 
-A terraform module to create a container registry (ECR - Elastic Container Registry) in AWS.
-There are two policies attached, a life-cycle policy which details how to look after the containers and a permission policy which has a default allow allusers in the account.
-I use this to store the customised containers I use in Codebuild and for storing containers for Fargate.
+...
 
 ## Related Projects
 
@@ -54,7 +73,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2019 [Slalom, LLC](https://slalom.com)
+Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
 
 ## License
 
@@ -81,11 +100,10 @@ under the License.
 
 ### Contributors
 
-  [![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
+[![James Woolfenden][jameswoolfenden_avatar]][jameswoolfenden_homepage]<br/>[James Woolfenden][jameswoolfenden_homepage] |
 
-  [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
-  [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-
+[jameswoolfenden_homepage]: https://github.com/jameswoolfenden
+[jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden

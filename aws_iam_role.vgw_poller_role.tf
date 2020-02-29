@@ -1,5 +1,5 @@
 resource "aws_iam_role" "vgw_poller_role" {
-  name = "TransitVpcPollerRole"
+  name = var.rolename
 
   assume_role_policy = <<EOF
 {
