@@ -19,35 +19,7 @@ module spoke {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Providers
-
-| Name | Version |
-|------|---------|
-| archive | n/a |
-| aws | n/a |
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
-| bucket\_name | n/a | `string` | n/a | yes |
-| bucket\_prefix | n/a | `string` | n/a | yes |
-| common\_tags | n/a | `map` | n/a | yes |
-| config\_file | n/a | `string` | n/a | yes |
-| event\_rule\_name | n/a | `string` | `"vgw_lambda_poller_event"` | no |
-| function\_name | n/a | `string` | `"vgw_poller"` | no |
-| log\_level | n/a | `string` | n/a | yes |
-| policy\_name | n/a | `string` | `"TransitVpcPollerPolicy"` | no |
-| poller\_enabled | n/a | `string` | `"true"` | no |
-| rolename | n/a | `string` | `"TransitVpcPollerRole"` | no |
-| runtime | n/a | `string` | `"python2.7"` | no |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| lambda | n/a |
-
+Error: no lines in file
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Information
 

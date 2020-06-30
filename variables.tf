@@ -56,3 +56,9 @@ variable "function_name" {
   description = ""
   type        = string
 }
+
+variable "tracing_mode" {
+  type        = string
+  description = "x-rays settings"
+  default     = "Active"
+}
