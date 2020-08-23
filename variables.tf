@@ -90,7 +90,7 @@ variable "tracing_mode" {
   default     = "Active"
 
   validation {
-    condition     = contains(["PassThrough","Active"], var.tracing_mode)
+    condition     = contains(["PassThrough", "Active"], var.tracing_mode)
     error_message = "Tracing mode can only be PassThrough or Active."
   }
 

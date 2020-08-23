@@ -21,7 +21,40 @@ module spoke {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-Error: no lines in file
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| archive | n/a |
+| aws | n/a |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| bucket\_name | The Name of the bucket | `string` | n/a | yes |
+| bucket\_prefix | A prefix for the bucket, so you can have named environments | `string` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| config\_file | n/a | `string` | n/a | yes |
+| event\_rule\_name | n/a | `string` | `"vgw_lambda_poller_event"` | no |
+| function\_name | n/a | `string` | `"vgw_poller"` | no |
+| log\_level | The Log level value must be one of 'DEBUG', 'INFO','WARNING', 'ERROR','CRITICAL'. | `string` | n/a | yes |
+| policy\_name | The name of the policy | `string` | `"TransitVpcPollerPolicy"` | no |
+| poller\_enabled | n/a | `bool` | `true` | no |
+| rolename | n/a | `string` | `"TransitVpcPollerRole"` | no |
+| runtime | The lambda runtime | `string` | `"python2.7"` | no |
+| tracing\_mode | x-rays settings | `string` | `"Active"` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| lambda | n/a |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Information
 
