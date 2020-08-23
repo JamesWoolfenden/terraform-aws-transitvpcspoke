@@ -3,6 +3,6 @@ module "spoke" {
   bucket_name   = ""
   bucket_prefix = ""
   config_file   = ""
-  log_level     = ""
-  common_tags   = {}
+  log_level     = "INFO"
+  common_tags   = { "createdby" = "Terraform" }
 }
