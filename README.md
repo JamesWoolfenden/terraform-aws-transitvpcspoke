@@ -1,5 +1,3 @@
-[![Slalom][logo]](https://slalom.com)
-
 # terraform-aws-transitvpcspoke
 
 [![Build Status](https://api.github.com/JamesWoolfenden/terraform-aws-transitvpcspoke/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke)
@@ -8,6 +6,7 @@
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 
 ---
+
 It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
@@ -21,41 +20,43 @@ module spoke {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| archive | n/a |
-| aws | n/a |
+| Name    | Version |
+| ------- | ------- |
+| archive | n/a     |
+| aws     | n/a     |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| bucket\_name | The Name of the bucket | `string` | n/a | yes |
-| bucket\_prefix | A prefix for the bucket, so you can have named environments | `string` | n/a | yes |
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
-| config\_file | n/a | `string` | n/a | yes |
-| event\_rule\_name | n/a | `string` | `"vgw_lambda_poller_event"` | no |
-| function\_name | n/a | `string` | `"vgw_poller"` | no |
-| log\_level | The Log level value must be one of 'DEBUG', 'INFO','WARNING', 'ERROR','CRITICAL'. | `string` | n/a | yes |
-| policy\_name | The name of the policy | `string` | `"TransitVpcPollerPolicy"` | no |
-| poller\_enabled | n/a | `bool` | `true` | no |
-| rolename | n/a | `string` | `"TransitVpcPollerRole"` | no |
-| runtime | The lambda runtime | `string` | `"python2.7"` | no |
-| tracing\_mode | x-rays settings | `string` | `"Active"` | no |
+| Name            | Description                                                                       | Type     | Default                     | Required |
+| --------------- | --------------------------------------------------------------------------------- | -------- | --------------------------- | :------: |
+| bucket_name     | The Name of the bucket                                                            | `string` | n/a                         |   yes    |
+| bucket_prefix   | A prefix for the bucket, so you can have named environments                       | `string` | n/a                         |   yes    |
+| common_tags     | Implements the common tags scheme                                                 | `map`    | n/a                         |   yes    |
+| config_file     | n/a                                                                               | `string` | n/a                         |   yes    |
+| event_rule_name | n/a                                                                               | `string` | `"vgw_lambda_poller_event"` |    no    |
+| function_name   | n/a                                                                               | `string` | `"vgw_poller"`              |    no    |
+| log_level       | The Log level value must be one of 'DEBUG', 'INFO','WARNING', 'ERROR','CRITICAL'. | `string` | n/a                         |   yes    |
+| policy_name     | The name of the policy                                                            | `string` | `"TransitVpcPollerPolicy"`  |    no    |
+| poller_enabled  | n/a                                                                               | `bool`   | `true`                      |    no    |
+| rolename        | n/a                                                                               | `string` | `"TransitVpcPollerRole"`    |    no    |
+| runtime         | The lambda runtime                                                                | `string` | `"python2.7"`               |    no    |
+| tracing_mode    | x-rays settings                                                                   | `string` | `"Active"`                  |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| lambda | n/a |
+| Name   | Description |
+| ------ | ----------- |
+| lambda | n/a         |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Information
 
 ...
@@ -80,7 +81,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
+Copyright © 2019-2020 James Woolfenden
 
 ## License
 
@@ -89,19 +90,19 @@ Copyright © 2019-2020 [Slalom, LLC](https://slalom.com)
 See [LICENSE](LICENSE) for full details.
 
 Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
+or more contributor license agreements. See the NOTICE file
 distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
+regarding copyright ownership. The ASF licenses this file
 to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
+with the License. You may obtain a copy of the License at
 
 <https://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
 "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
+KIND, either express or implied. See the License for the
 specific language governing permissions and limitations
 under the License.
 
@@ -111,12 +112,9 @@ under the License.
 
 [jameswoolfenden_homepage]: https://github.com/jameswoolfenden
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
-[logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
-[website]: https://slalom.com
 [github]: https://github.com/jameswoolfenden
 [linkedin]: https://www.linkedin.com/in/jameswoolfenden/
 [twitter]: https://twitter.com/JimWoolfenden
-
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-transitvpcspoke&url=https://github.com/jameswoolfenden/terraform-aws-transitvpcspoke
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-transitvpcspoke&url=https://github.com/jameswoolfenden/terraform-aws-transitvpcspoke
 [share_reddit]: https://reddit.com/submit/?url=https://github.com/jameswoolfenden/terraform-aws-transitvpcspoke
