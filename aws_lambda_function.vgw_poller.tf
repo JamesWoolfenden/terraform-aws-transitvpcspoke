@@ -19,7 +19,7 @@ resource "aws_lambda_function" "vgw_poller" {
   }
 
   tracing_config {
-    mode = var.tracing_mode
+    mode = "PassThrough"
   }
 
   tags = var.common_tags
