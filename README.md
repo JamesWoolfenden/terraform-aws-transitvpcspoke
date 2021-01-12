@@ -1,6 +1,6 @@
 # terraform-aws-transitvpcspoke
 
-[![Build Status](https://api.github.com/JamesWoolfenden/terraform-aws-transitvpcspoke/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-transitvpcspoke.svg)](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
@@ -80,7 +80,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2020 James Woolfenden
+Copyright © 2019-2021 James Woolfenden
 
 ## License
 
