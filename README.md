@@ -41,7 +41,7 @@ No requirements.
 |------|-------------|------|---------|:--------:|
 | bucket\_name | The Name of the bucket | `string` | n/a | yes |
 | bucket\_prefix | A prefix for the bucket, so you can have named environments | `string` | n/a | yes |
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map(any)` | n/a | yes |
 | config\_file | n/a | `string` | n/a | yes |
 | event\_rule\_name | n/a | `string` | `"vgw_lambda_poller_event"` | no |
 | function\_name | n/a | `string` | `"vgw_poller"` | no |
