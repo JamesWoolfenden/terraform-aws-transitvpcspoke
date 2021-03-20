@@ -1,4 +1,5 @@
 data "aws_iam_policy_document" "vgw_poller_role_policy_document" {
+  #checkov:skip=CKV_AWS_111:
   statement {
     sid = "1"
 
