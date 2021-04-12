@@ -1,4 +1,7 @@
 resource "aws_lambda_function" "vgw_poller" {
+  # checkov:skip=CKV_AWS_117: ADD REASON
+  # checkov:skip=CKV_AWS_115: ADD REASON
+  # checkov:skip=CKV_AWS_116: ADD REASON
   filename         = "${path.module}/files/lambda.zip"
   function_name    = var.function_name
   role             = aws_iam_role.vgw_poller_role.arn
