@@ -1,2 +1,5 @@
 version: 0.1
-resource_usage: {}
+resource_usage:
+  module.spoke.aws_lambda_function.vgw_poller:
+    monthly_requests: 0
+    request_duration_ms: 0
