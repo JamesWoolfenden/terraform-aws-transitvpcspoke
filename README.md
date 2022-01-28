@@ -24,16 +24,17 @@ module "spoke" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_archive"></a> [archive](#provider\_archive) | n/a |
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| Name                                                         | Version |
+| ------------------------------------------------------------ | ------- |
+| <a name="provider_archive"></a> [archive](#provider_archive) | n/a     |
+| <a name="provider_aws"></a> [aws](#provider_aws)             | n/a     |
 
 ## Modules
 
@@ -41,39 +42,40 @@ No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_cloudwatch_event_rule.vgw_poller_event](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_rule) | resource |
-| [aws_cloudwatch_event_target.vgw_poller_event_target](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_target) | resource |
-| [aws_iam_policy.vgw_poller_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
-| [aws_iam_policy_attachment.vgw_poller_role_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy_attachment) | resource |
-| [aws_iam_role.vgw_poller_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
-| [aws_lambda_function.vgw_poller](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function) | resource |
-| [archive_file.lambda](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file) | data source |
-| [aws_iam_policy_document.vgw_poller_role_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+| Name                                                                                                                                                             | Type        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [aws_cloudwatch_event_rule.vgw_poller_event](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_rule)                  | resource    |
+| [aws_cloudwatch_event_target.vgw_poller_event_target](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_target)       | resource    |
+| [aws_iam_policy.vgw_poller_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy)                                  | resource    |
+| [aws_iam_policy_attachment.vgw_poller_role_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy_attachment) | resource    |
+| [aws_iam_role.vgw_poller_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role)                                             | resource    |
+| [aws_lambda_function.vgw_poller](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function)                                    | resource    |
+| [archive_file.lambda](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file)                                                   | data source |
+| [aws_iam_policy_document.vgw_poller_role_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document)    | data source |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | The Name of the bucket | `string` | n/a | yes |
-| <a name="input_bucket_prefix"></a> [bucket\_prefix](#input\_bucket\_prefix) | A prefix for the bucket, so you can have named environments | `string` | n/a | yes |
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Implements the common tags scheme | `map(any)` | n/a | yes |
-| <a name="input_config_file"></a> [config\_file](#input\_config\_file) | n/a | `string` | n/a | yes |
-| <a name="input_event_rule_name"></a> [event\_rule\_name](#input\_event\_rule\_name) | n/a | `string` | `"vgw_lambda_poller_event"` | no |
-| <a name="input_function_name"></a> [function\_name](#input\_function\_name) | n/a | `string` | `"vgw_poller"` | no |
-| <a name="input_log_level"></a> [log\_level](#input\_log\_level) | The Log level value must be one of 'DEBUG', 'INFO','WARNING', 'ERROR','CRITICAL'. | `string` | n/a | yes |
-| <a name="input_policy_name"></a> [policy\_name](#input\_policy\_name) | The name of the policy | `string` | `"TransitVpcPollerPolicy"` | no |
-| <a name="input_poller_enabled"></a> [poller\_enabled](#input\_poller\_enabled) | n/a | `bool` | `true` | no |
-| <a name="input_rolename"></a> [rolename](#input\_rolename) | n/a | `string` | `"TransitVpcPollerRole"` | no |
-| <a name="input_runtime"></a> [runtime](#input\_runtime) | The lambda runtime | `string` | `"python2.7"` | no |
-| <a name="input_tracing_mode"></a> [tracing\_mode](#input\_tracing\_mode) | x-rays settings | `string` | `"Active"` | no |
+| Name                                                                           | Description                                                                       | Type       | Default                     | Required |
+| ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- | ---------- | --------------------------- | :------: |
+| <a name="input_bucket_name"></a> [bucket_name](#input_bucket_name)             | The Name of the bucket                                                            | `string`   | n/a                         |   yes    |
+| <a name="input_bucket_prefix"></a> [bucket_prefix](#input_bucket_prefix)       | A prefix for the bucket, so you can have named environments                       | `string`   | n/a                         |   yes    |
+| <a name="input_common_tags"></a> [common_tags](#input_common_tags)             | Implements the common tags scheme                                                 | `map(any)` | n/a                         |   yes    |
+| <a name="input_config_file"></a> [config_file](#input_config_file)             | n/a                                                                               | `string`   | n/a                         |   yes    |
+| <a name="input_event_rule_name"></a> [event_rule_name](#input_event_rule_name) | n/a                                                                               | `string`   | `"vgw_lambda_poller_event"` |    no    |
+| <a name="input_function_name"></a> [function_name](#input_function_name)       | n/a                                                                               | `string`   | `"vgw_poller"`              |    no    |
+| <a name="input_log_level"></a> [log_level](#input_log_level)                   | The Log level value must be one of 'DEBUG', 'INFO','WARNING', 'ERROR','CRITICAL'. | `string`   | n/a                         |   yes    |
+| <a name="input_policy_name"></a> [policy_name](#input_policy_name)             | The name of the policy                                                            | `string`   | `"TransitVpcPollerPolicy"`  |    no    |
+| <a name="input_poller_enabled"></a> [poller_enabled](#input_poller_enabled)    | n/a                                                                               | `bool`     | `true`                      |    no    |
+| <a name="input_rolename"></a> [rolename](#input_rolename)                      | n/a                                                                               | `string`   | `"TransitVpcPollerRole"`    |    no    |
+| <a name="input_runtime"></a> [runtime](#input_runtime)                         | The lambda runtime                                                                | `string`   | `"python2.7"`               |    no    |
+| <a name="input_tracing_mode"></a> [tracing_mode](#input_tracing_mode)          | x-rays settings                                                                   | `string`   | `"Active"`                  |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_lambda"></a> [lambda](#output\_lambda) | n/a |
+| Name                                                  | Description |
+| ----------------------------------------------------- | ----------- |
+| <a name="output_lambda"></a> [lambda](#output_lambda) | n/a         |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Information
@@ -100,7 +102,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright © 2019-2022 James Woolfenden
 
 ## License
 
