@@ -96,9 +96,12 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
-                "ec2:DescribeAccountAttributes"
+                "ec2:DescribeAccountAttributes",
+                "ec2:DescribeNetworkInterfaces"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
@@ -112,7 +115,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "events:PutTargets",
                 "events:RemoveTargets"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor2",
@@ -134,7 +139,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:ListRolePolicies",
                 "iam:PassRole"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor3",
@@ -148,7 +155,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "lambda:TagResource",
                 "lambda:UntagResource"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
