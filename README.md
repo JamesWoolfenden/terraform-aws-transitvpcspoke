@@ -1,13 +1,11 @@
 # terraform-aws-transitvpcspoke
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke/workflows/Verify/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-transitvpcspoke.svg)](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-transitvpcspoke.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-transitvpcspoke/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-transitvpcspoke/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-transitvpcspoke&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-transitvpcspoke/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-transitvpcspoke&benchmark=INFRASTRUCTURE+SECURITY)
 
 ---
 
@@ -31,7 +29,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_archive"></a> [archive](#provider\_archive) | n/a |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
@@ -42,7 +40,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_cloudwatch_event_rule.vgw_poller_event](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_rule) | resource |
 | [aws_cloudwatch_event_target.vgw_poller_event_target](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_target) | resource |
 | [aws_iam_policy.vgw_poller_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
@@ -55,7 +53,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | The Name of the bucket | `string` | n/a | yes |
 | <a name="input_bucket_prefix"></a> [bucket\_prefix](#input\_bucket\_prefix) | A prefix for the bucket, so you can have named environments | `string` | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Implements the common tags scheme | `map(any)` | n/a | yes |
@@ -66,13 +64,13 @@ No modules.
 | <a name="input_policy_name"></a> [policy\_name](#input\_policy\_name) | The name of the policy | `string` | `"TransitVpcPollerPolicy"` | no |
 | <a name="input_poller_enabled"></a> [poller\_enabled](#input\_poller\_enabled) | n/a | `bool` | `true` | no |
 | <a name="input_rolename"></a> [rolename](#input\_rolename) | n/a | `string` | `"TransitVpcPollerRole"` | no |
-| <a name="input_runtime"></a> [runtime](#input\_runtime) | The lambda runtime | `string` | `"python2.7"` | no |
+| <a name="input_runtime"></a> [runtime](#input\_runtime) | The lambda runtime | `string` | `"python3.12"` | no |
 | <a name="input_tracing_mode"></a> [tracing\_mode](#input\_tracing\_mode) | x-rays settings | `string` | `"Active"` | no |
 
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_lambda"></a> [lambda](#output\_lambda) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 

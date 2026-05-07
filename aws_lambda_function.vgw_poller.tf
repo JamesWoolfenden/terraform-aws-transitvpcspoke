@@ -7,6 +7,7 @@ resource "aws_lambda_function" "vgw_poller" {
   # checkov:skip=CKV_AWS_115: ADD REASON
   # checkov:skip=CKV_AWS_116: ADD REASON
   # checkov:skip=CKV_AWS_173: no secrets here
+  # checkov:skip=CKV_AWS_272: code-signing config out of scope for this module
 
   filename         = "${path.module}/files/lambda.zip"
   function_name    = var.function_name

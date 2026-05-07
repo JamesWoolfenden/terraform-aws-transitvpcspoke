@@ -67,7 +67,7 @@ variable "event_rule_name" {
 variable "runtime" {
   type        = string
   description = "The lambda runtime"
-  default     = "python2.7"
+  default     = "python3.12"
   validation {
     condition     = length(var.runtime) > 5 && substr(var.runtime, 0, 6) == "python"
     error_message = "This uses python do its value need to start with \"python\"."
